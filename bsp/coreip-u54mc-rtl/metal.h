@@ -517,6 +517,7 @@ struct __metal_driver_sifive_test0 __metal_dt_teststatus_4000 = {
 struct __metal_driver_sifive_fu540_c000_l2 __metal_dt_cache_controller_2010000 = {
     .vtable = &__metal_driver_vtable_sifive_fu540_c000_l2,
     .cache.vtable = &__metal_driver_vtable_sifive_fu540_c000_l2.cache,
+    .control_base = METAL_SIFIVE_FU540_C000_L2_2010000_BASE_ADDRESS,
 };
 
 
@@ -589,6 +590,11 @@ struct __metal_driver_sifive_spi0 *__metal_spi_table[] = {
 #define __METAL_DT_SHUTDOWN_HANDLE (&__metal_dt_teststatus_4000.shutdown)
 
 #define __METAL_DT_TESTSTATUS_4000_HANDLE (&__metal_dt_teststatus_4000.shutdown)
+
+/* From cache_controller@2010000 */
+#define __METAL_DT_SIFIVE_FU540_C000_L2_HANDLE (&__metal_dt_cache_controller_2010000)
+
+#define __METAL_DT_CACHE_CONTROLLER_2010000_HANDLE (&__metal_dt_cache_controller_2010000)
 
 
 #endif /* ! __METAL_MACHINE_MACROS */
